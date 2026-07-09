@@ -3,102 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUTANT PARTY KREW</title>
+    <title>My Cloudflare Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #311042 100%);
         }
-        .container {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        header {
-            text-align: center;
-            margin-bottom: 30px;
+        .link-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        header h1 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        header p {
-            color: #777;
-        }
-        .project {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .project:last-child {
-            border-bottom: none;
-        }
-        .project h2 {
-            color: #34495e;
-            margin-bottom: 10px;
-        }
-        .project p {
-            color: #555;
-        }
-        .company-info {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            text-align: center;
-            color: #777;
-        }
-        .company-info p {
-            margin-bottom: 5px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .button:hover {
-            background-color: #2980b9;
+        .link-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #f97316; /* Cloudflare Orange accent */
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(249, 115, 22, 0.3);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>[Your Company Name]</h1>
-            <p>Crafting unique and engaging indie games.</p>
-        </header>
+<body class="text-slate-200 font-sans min-h-screen flex items-center justify-center p-4">
 
-        <section id="projects">
-            <h2>Our Projects</h2>
+    <div class="w-full max-w-md glass-card rounded-3xl p-8 md:p-10 shadow-2xl text-center">
+        
+        <div class="mb-8">
+            <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-tr from-orange-500 to-amber-400 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/20">
+                <i data-lucide="cloud" class="w-10 h-10 text-white animate-pulse"></i>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tight text-white">Project Hub</h1>
+            <p class="text-sm text-slate-400 mt-1">Quick access to my Cloudflare deployments</p>
+        </div>
 
-            <div class="project">
-                <h3>[Game Title 1]</h3>
-                <p>[Brief description of Game 1 - genre, platform(s), key features, etc.]</p>
+        <div class="space-y-4">
+            
+            <a href="https://project1.pages.dev" target="_blank" rel="noopener noreferrer" class="link-btn flex items-center justify-between p-4 rounded-xl group">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2 bg-orange-500/10 text-orange-400 rounded-lg group-hover:bg-orange-500/20 transition-colors">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-medium text-slate-200 group-hover:text-white transition-colors">Main Portfolio</span>
                 </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-orange-400 transition-colors"></i>
+            </a>
 
-            <div class="project">
-                <h3>[Game Title 2]</h3>
-                <p>[Brief description of Game 2 - genre, platform(s), key features, etc.]</p>
+            <a href="https://project2.pages.dev" target="_blank" rel="noopener noreferrer" class="link-btn flex items-center justify-between p-4 rounded-xl group">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg group-hover:bg-indigo-500/20 transition-colors">
+                        <i data-lucide="code-2" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-medium text-slate-200 group-hover:text-white transition-colors">Web Applications</span>
                 </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-indigo-400 transition-colors"></i>
+            </a>
 
-            </section>
+            <a href="https://project3.pages.dev" target="_blank" rel="noopener noreferrer" class="link-btn flex items-center justify-between p-4 rounded-xl group">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg group-hover:bg-emerald-500/20 transition-colors">
+                        <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-medium text-slate-200 group-hover:text-white transition-colors">Analytics Dashboard</span>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition-colors"></i>
+            </a>
 
-        <section class="company-info">
-            <h2>About Us</h2>
-            <p>[Short and sweet description of your indie game company - mission, values, etc.]</p>
-            <p>Based in Monterey Park, California.</p>
-            <p>Email: <a href="mailto:[Your Company Email]">[Your Company Email]</a></p>
-            </section>
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="link-btn flex items-center justify-between p-4 rounded-xl group">
+                <div class="flex items-center space-x-4">
+                    <div class="p-2 bg-slate-500/10 text-slate-400 rounded-lg group-hover:bg-slate-500/20 transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </div>
+                    <span class="font-medium text-slate-200 group-hover:text-white transition-colors">GitHub Profile</span>
+                </div>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-slate-300 transition-colors"></i>
+            </a>
+
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-800/60 flex items-center justify-center space-x-2 text-xs text-slate-500">
+            <span>Powered by</span>
+            <span class="text-orange-500/80 font-semibold tracking-wider hover:text-orange-400 transition-colors">CLOUDFLARE</span>
+        </div>
+
     </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
